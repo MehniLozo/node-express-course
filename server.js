@@ -1,10 +1,9 @@
 const express = require('express');
 const app = express();
-//body-parser is necessary for POST requests
-const bodyParser = require('body-parser');
 
-console.log(app);
-app.use(bodyParser.json());
+//const bodyParser = require('body-parser'); as of bodyParser has been deprecated
+app.use(express.json())
+
 const mockUserData=[
 	{name:'Mark'},
 	{name:'Jill'}
